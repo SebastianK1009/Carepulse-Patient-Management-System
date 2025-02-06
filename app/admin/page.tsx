@@ -10,6 +10,7 @@ import {columns} from '@/components/table/columns'
 
 const Admin =  async () => {
 
+    
 
     const appointments = await getRecentAppointmentList();
 
