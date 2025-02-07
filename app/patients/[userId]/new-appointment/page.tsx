@@ -1,7 +1,4 @@
-import { Button } from "@/components/ui/button"
-import PatientForm from "@/components/forms/PatientForm";
 import Image from 'next/image'
-import Link from "next/link";
 import AppointmentForm from "@/components/forms/AppointmentForm";
 import { getPatient } from "@/lib/actions/patient.actions";
 import * as Sentry from '@sentry/nextjs'
@@ -24,14 +21,13 @@ const Appointment = async ({ params: { userId } }: SearchParamProps) => {
                     <AppointmentForm
                         type="create"
                         userId={ userId }
-                        patientId={ patient.$id }
-                    />
-
+                        patientId={ patient.$id } setOpen={ function (open: boolean): void {
+                            throw new Error('Function not implemented.');
+                        } }                    />
                     <p className="copyright mt-10 py-12">
                         © 2025 CarePulse
                     </p>
                 </div>
-
             </section>
 
             <Image

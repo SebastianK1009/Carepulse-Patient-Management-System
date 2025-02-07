@@ -4,8 +4,8 @@ import Link from "next/link";
 import PasskeyModal from "@/components/PasskeyModal";
 
 
-const Home = async ({ searchParams }: SearchParamProps) => {
-  const isAdmin = await searchParams?.admin === "true";
+const Home = ({ searchParams }: SearchParamProps) => {
+  const isAdmin = searchParams?.admin === "true";
 
   return (
     <div className="flex h-screen max-h-screen">
